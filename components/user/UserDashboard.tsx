@@ -4,20 +4,14 @@ import { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { useUserAuth } from '../../lib/contexts/UserAuthContext';
 import solanaService from '../../lib/services/solanaService';
-import Image from 'next/image';
 
 export default function UserDashboard() {
-  const { publicKey, disconnect } = useWallet();
+  const { publicKey } = useWallet();
   const { userProfile, isAuthenticated, logout } = useUserAuth();
   const [isCopied, setIsCopied] = useState(false);
   const [balance, setBalance] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [airdropRequested, setAirdropRequested] = useState(false);
-
-  // Format wallet address for display
-  const formatWalletAddress = (address: string) => {
-    return `${address.slice(0, 6)}...${address.slice(-4)}`;
-  };
 
   // Copy wallet address to clipboard
   const copyToClipboard = async () => {

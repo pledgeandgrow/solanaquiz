@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import dynamic from 'next/dynamic';
 import { useUserAuth } from '../../lib/contexts/UserAuthContext';
@@ -14,7 +14,7 @@ interface WalletButtonProps {
 
 export default function WalletButton({ className = '' }: WalletButtonProps) {
   const { connected, publicKey, disconnect, connecting } = useWallet();
-  const { userProfile, logout } = useUserAuth();
+  const { logout } = useUserAuth();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDisconnecting, setIsDisconnecting] = useState(false);
   
