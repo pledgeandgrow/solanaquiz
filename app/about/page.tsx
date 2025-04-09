@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import TeamMember from '../../components/about/TeamMember';
 import MissionStatement from '../../components/about/MissionStatement';
@@ -169,7 +171,24 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <MissionStatement 
             title="Empowering Blockchain Education Through Gamification"
-            content="At SolanaQuiz, we believe that education should be engaging, accessible, and rewarding. Our mission is to demystify blockchain technology and make learning about Solana fun and interactive. We&apos;re committed to creating a platform where curiosity is rewarded and knowledge is valued."
+            description="At SolanaQuiz, we believe that education should be engaging, accessible, and rewarding. Our mission is to demystify blockchain technology and make learning about Solana fun and interactive. We're committed to creating a platform where curiosity is rewarded and knowledge is valued."
+            values={[
+              {
+                icon: "",
+                title: "Accessibility",
+                description: "Making blockchain knowledge accessible to everyone"
+              },
+              {
+                icon: "",
+                title: "Engagement",
+                description: "Creating fun, interactive learning experiences"
+              },
+              {
+                icon: "",
+                title: "Rewards",
+                description: "Incentivizing learning with real crypto rewards"
+              }
+            ]}
           />
         </div>
       </section>
