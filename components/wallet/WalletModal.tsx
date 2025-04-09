@@ -13,7 +13,7 @@ interface WalletModalProps {
 }
 
 const WalletModal = ({ isOpen, onClose, onConnect }: WalletModalProps) => {
-  const { wallets, select, connect, connected, publicKey, disconnect, connecting } = useWallet();
+  const { wallets, select, connect, connected, publicKey, connecting } = useWallet();
   const { registerUser, isLoading: isAuthLoading } = useUserAuth();
   const [selectedWallet, setSelectedWallet] = useState<WalletName | null>(null);
   const [email, setEmail] = useState('');
@@ -83,33 +83,9 @@ const WalletModal = ({ isOpen, onClose, onConnect }: WalletModalProps) => {
 
   // Handle wallet selection
   const handleWalletSelect = async (walletName: WalletName) => {
-    try {
-      setSelectedWallet(walletName);
-      select(walletName);
-      
-      // Check if the wallet requires user info before connecting
-      // For this example, we'll always collect user info
-      setStep('user-info');
-    } catch (err) {
-      console.error('Error selecting wallet:', err);
-      setError(err instanceof Error ? err.message : 'Failed to select wallet');
-    }
-  };
-
-  // Handle direct connection (without user info)
-  const handleDirectConnect = async (walletName: WalletName) => {
-    try {
-      setSelectedWallet(walletName);
-      select(walletName);
-      setStep('connecting');
-      
-      // Attempt to connect the wallet directly
-      await connect();
-    } catch (err) {
-      console.error('Connection error:', err);
-      setError(err instanceof Error ? err.message : 'Failed to connect wallet');
-      setStep('select-wallet');
-    }
+    setSelectedWallet(walletName);
+    setStep('user-info');
+    select(walletName);
   };
 
   // Handle form submission

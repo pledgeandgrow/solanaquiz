@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import WalletModal from './WalletModal';
+import { useCallback } from 'react';
 
 interface WalletModalWrapperProps {
   isOpen: boolean;
@@ -9,6 +9,11 @@ interface WalletModalWrapperProps {
 }
 
 export default function WalletModalWrapper({ isOpen, onClose }: WalletModalWrapperProps) {
+  // Using useCallback to ensure the function is memoized
+  const handleClose = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
   const handleConnect = (walletAddress: string) => {
     console.log('Wallet connected:', walletAddress);
     // Here you could call an API to register the user or update their profile
@@ -17,7 +22,7 @@ export default function WalletModalWrapper({ isOpen, onClose }: WalletModalWrapp
   return (
     <WalletModal 
       isOpen={isOpen} 
-      onClose={onClose} 
+      onClose={handleClose} 
       onConnect={handleConnect}
     />
   );

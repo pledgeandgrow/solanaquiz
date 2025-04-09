@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import QuizContent from '../../components/quiz/QuizContent';
 import Layout from '../../components/layout/Layout';

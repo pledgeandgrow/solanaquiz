@@ -6,7 +6,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { useState, useEffect } from 'react';
 
 export const WalletConnectButton: FC = () => {
-  const { publicKey, wallet, disconnect } = useWallet();
+  const { publicKey } = useWallet();
   const [walletAddress, setWalletAddress] = useState<string>('');
 
   useEffect(() => {
@@ -17,22 +17,10 @@ export const WalletConnectButton: FC = () => {
     }
   }, [publicKey]);
 
-  // Custom styling to match our app's design
-  const buttonStyle = {
-    background: 'linear-gradient(to right, #9945FF, #14F195)',
-    borderRadius: '0.5rem',
-    color: 'white',
-    padding: '0.75rem 1.5rem',
-    fontWeight: 600,
-    border: 'none',
-    cursor: 'pointer',
-    transition: 'all 0.2s ease',
-  };
-
   return (
     <div className="wallet-connect-container">
       {/* Use the WalletMultiButton from the wallet adapter UI */}
-      <WalletMultiButton className="custom-wallet-button" />
+      <WalletMultiButton className="bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg px-6 py-3 font-semibold text-white hover:opacity-90 transition-all" />
       
       {/* Display wallet address if connected */}
       {walletAddress && (
