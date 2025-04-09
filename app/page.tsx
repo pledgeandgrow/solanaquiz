@@ -63,7 +63,7 @@ export default function Home() {
               Powered by <span className="text-purple-500">Solana Blockchain</span>
             </h2>
             <p className="mx-auto max-w-2xl text-gray-400">
-              Leverage the power of Solana's high-performance blockchain for your business applications
+              Leverage the power of Solana&#39;s high-performance blockchain for your business applications
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
               <h3 className="mb-3 text-xl font-semibold">Lightning Fast Transactions</h3>
               <p className="text-gray-400">
-                Process thousands of transactions per second with minimal fees on Solana's high-performance blockchain.
+                Process thousands of transactions per second with minimal fees on Solana&#39;s high-performance blockchain.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
               </div>
               <h3 className="mb-3 text-xl font-semibold">Secure Smart Contracts</h3>
               <p className="text-gray-400">
-                Build and deploy secure smart contracts with Solana's Rust-based programming model for enterprise-grade security.
+                Build and deploy secure smart contracts with Solana&#39;s Rust-based programming model for enterprise-grade security.
               </p>
             </div>
 
@@ -146,7 +146,7 @@ export default function Home() {
             <div className="text-center">
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-900 text-2xl font-bold">4</div>
               <h3 className="mb-2 text-xl font-semibold">Scale</h3>
-              <p className="text-gray-400">Scale your application with Solana's high throughput</p>
+              <p className="text-gray-400">Scale your application with Solana&#39;s high throughput</p>
             </div>
           </div>
         </div>

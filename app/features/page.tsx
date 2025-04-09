@@ -1,8 +1,8 @@
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Layout from '../../components/layout/Layout';
 import FeatureCard from '../../components/features/FeatureCard';
 import FeatureSection from '../../components/features/FeatureSection';
-import Layout from '../../components/layout/Layout';
 
 export default function FeaturesPage() {
   return (

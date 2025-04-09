@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import StepCard from '../../components/how-it-works/StepCard';
 import ProcessFlow from '../../components/how-it-works/ProcessFlow';
 import FaqAccordion from '../../components/how-it-works/FaqAccordion';

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import TeamMember from '../../components/about/TeamMember';
 import MissionStatement from '../../components/about/MissionStatement';
 import Timeline from '../../components/about/Timeline';
@@ -169,9 +168,8 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <MissionStatement 
-            title={companyValues.title}
-            description={companyValues.description}
-            values={companyValues.values}
+            title="Empowering Blockchain Education Through Gamification"
+            content="At SolanaQuiz, we believe that education should be engaging, accessible, and rewarding. Our mission is to demystify blockchain technology and make learning about Solana fun and interactive. We&apos;re committed to creating a platform where curiosity is rewarded and knowledge is valued."
           />
         </div>
       </section>
